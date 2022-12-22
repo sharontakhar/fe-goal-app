@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.quarter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quarter p {
+  margin: 28px;
+  color: #ff8200;
+}
+.quarter div {
+  margin: 28px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  min-width: 180px;
+  max-height: 180px;
+  border-radius: 36px;
+  background: linear-gradient(145deg, #e3e3e3, #ffffff);
+}
+
+.quarter div:hover {
+  background: linear-gradient(145deg, #494545, #2f2c2c);
+}
+
+.main_page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div_daily {
+  height: 600px;
+  margin: 30px;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #0a004d, #0c005b);
+  box-shadow: 21px 21px 42px #070037, -21px -21px 42px #0f0073;
+}
+
+/* #calendar {
+  background-color: #ffffff;
+} */
