@@ -29,6 +29,9 @@
   background: linear-gradient(145deg, #e3e3e3, #ffffff);
 }
 
+.quoteText {
+  color: white;
+}
 .quarter div:hover {
   background: linear-gradient(145deg, #494545, #2f2c2c);
 }
@@ -47,6 +50,10 @@
   box-shadow: 21px 21px 42px #070037, -21px -21px 42px #0f0073;
 }
 
+.fc-title {
+  font-size: 0.7em;
+  overflow-wrap: break-word;
+}
 /* #calendar {
   background-color: #ffffff;
 } */

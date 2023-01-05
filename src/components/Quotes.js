@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -15,13 +16,11 @@ const Quotes = () => {
 
   return (
     <>
-      {
-        (data.map((quote) => {
-          console.log(quote.text);
-          return <div>`${quote}`</div>;
-        }),
-        [])
-      }
+      <div>
+        {data.map((quote) => (
+          <div>{quote.text}</div>
+        ))}
+      </div>
     </>
   );
 };
