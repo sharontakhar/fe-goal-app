@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import { apiPostComments } from "../utils/api";
 
 const DailyFocus = (customEvents) => {
-  const [newComments, setNewComment] = useState([]);
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([{}]);
+  const [newComment, setNewComment] = useState("");
 
   const addComment = (newComment) => {
-    apiPostComments(newComment.title).then((data) => {
-      setComments([...comments]);
+    apiPostComments(newComment).then((data) => {
+      console.log(newComment, "new comment");
+      setComments([...comments, newComment]);
     });
+  };
+
+  const handleChange = () => {
+    addComment(newComment);
   };
 
   return (
@@ -24,9 +29,9 @@ const DailyFocus = (customEvents) => {
       <form>
         <label>
           task:
-          <input type="title" />
+          <input type="title" onChange={(e) => setNewComment(e.target.value)} />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" onSubmit={handleChange} />
       </form>
     </div>
   );
